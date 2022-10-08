@@ -1,0 +1,20 @@
+module mulmul(clk,reset,start,word1,word2,product,ready,sign);
+	input clk,reset,start;
+	input[3:0]word1,word2;
+	output[7:0]product;
+	reg [7:0] test1,test2;
+	reg t,f;
+	output ready;
+	input sign
+	wire m0,load,shift,add;
+	datapath u1(clk,reset,load,shift,add,word1,word2,test1,m0);
+	controller u2(clk,reset,start,m0,load,shift,add,t);
+	datapaths u3(clk,reset,load,shift,addshift,sub,word1,word2,test2,m0);
+	controllers u4(clk,reset,start,m0,load,shift,addshift,sub,f);
+	if (sign) begin
+		assign product= test2;
+		assign ready=f;end
+	else begin
+		assign product=test1;
+		ready=t;end
+endmodule

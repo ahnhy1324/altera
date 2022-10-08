@@ -1,0 +1,75 @@
+
+module clock(mod,in,clk,display,display10,min1,min10,hour,hour10);
+input mod;
+input in;
+input clk;
+output [0:6]display;
+output [0:6]display10;
+output [0:6]min1;
+output [0:6]min10;
+output [0:6]hour;
+output [0:6]hour10;
+
+reg [0:6]mode=1;
+
+wire [0:6]disp;
+wire [0:6]disp10;
+wire [0:6]minc1;
+wire [0:6]minc10;
+wire [0:6]hours;
+wire [0:6]hours10;
+
+
+wire clk;
+wire clk1;
+
+wire [4:0]bcd;
+wire [4:0]bcd10;
+wire [4:0]min;
+wire [4:0]minw10;
+wire [4:0]hou;
+wire [4:0]hou10;
+
+
+wire tc;
+wire tc2;
+wire tc3;
+wire tc4;
+wire tc5;
+
+clk1hz(clk,clk1);
+led u1(bcd+(!mode*clk1*13),disp);
+led u2(bcd10+(!mode*clk1*13),disp10);
+led u3(min+(!mode*clk1*13),minc1);
+led u4(minw10+(!mode*clk1*13),minc10);
+led k1(hou%10+(!mode*clk1*13),hours);
+led k2(hou/10+(!mode*clk1*13),hours10);
+
+counterN  #(10,4) u5 (clk1&mode,0,1,bcd,tc);
+counterN  #(6,3) u7 (tc,0,1,bcd10,tc2);
+counterN  #(10,4) u6 (tc2^(!mode&!in),!reset&mode,1,min,tc3);
+counterN  #(6,3) u8 (tc3,0,1,minw10,tc4);
+counterN  #(24,5) u9 (tc4,0,1,hou,tc5);
+
+assign display = disp;
+assign display10 = disp10;
+assign min1 = minc1;
+assign min10 = minc10;
+assign hour=hours;
+assign hour10=hours10;
+
+always@(posedge mod)begin
+mode=!mode;
+end
+endmodule
+
+module alarm(out0,out1,out2,out3);
+output[6:0]out0,out1,out2,out3;
+
+led u1(14,out0);
+led u2(14,out1);
+led u3(14,out2);
+led u4(14,out3);
+
+
+endmodule

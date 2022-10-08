@@ -1,0 +1,756 @@
+$comment
+	File created using the following command:
+		vcd file devide.msim.vcd -direction
+$end
+$date
+	Thu Nov 25 01:41:13 2021
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module divide_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 1 " reset $end
+$var reg 1 # start $end
+$var reg 8 $ word1 [7:0] $end
+$var reg 4 % word2 [3:0] $end
+$var wire 1 & quotient [3] $end
+$var wire 1 ' quotient [2] $end
+$var wire 1 ( quotient [1] $end
+$var wire 1 ) quotient [0] $end
+$var wire 1 * ready $end
+$var wire 1 + remainder [3] $end
+$var wire 1 , remainder [2] $end
+$var wire 1 - remainder [1] $end
+$var wire 1 . remainder [0] $end
+$var wire 1 / sampler $end
+$scope module i1 $end
+$var wire 1 0 gnd $end
+$var wire 1 1 vcc $end
+$var wire 1 2 unknown $end
+$var tri1 1 3 devclrn $end
+$var tri1 1 4 devpor $end
+$var tri1 1 5 devoe $end
+$var wire 1 6 u1|diff[1]~2_combout $end
+$var wire 1 7 u1|diff[3]~6_combout $end
+$var wire 1 8 word1[2]~input_o $end
+$var wire 1 9 word1[3]~input_o $end
+$var wire 1 : word2[3]~input_o $end
+$var wire 1 ; word2[2]~input_o $end
+$var wire 1 < word2[0]~input_o $end
+$var wire 1 = quotient[0]~output_o $end
+$var wire 1 > quotient[1]~output_o $end
+$var wire 1 ? quotient[2]~output_o $end
+$var wire 1 @ quotient[3]~output_o $end
+$var wire 1 A remainder[0]~output_o $end
+$var wire 1 B remainder[1]~output_o $end
+$var wire 1 C remainder[2]~output_o $end
+$var wire 1 D remainder[3]~output_o $end
+$var wire 1 E ready~output_o $end
+$var wire 1 F clk~input_o $end
+$var wire 1 G start~input_o $end
+$var wire 1 H u2|count[0]~0_combout $end
+$var wire 1 I reset~input_o $end
+$var wire 1 J u2|count[1]~1_combout $end
+$var wire 1 K u2|state~0_combout $end
+$var wire 1 L u2|state~q $end
+$var wire 1 M word1[1]~input_o $end
+$var wire 1 N u1|dividend~6_combout $end
+$var wire 1 O u1|dividend~7_combout $end
+$var wire 1 P u1|dividend~8_combout $end
+$var wire 1 Q u1|dividend~9_combout $end
+$var wire 1 R u1|diff[0]~0_combout $end
+$var wire 1 S u2|shift~combout $end
+$var wire 1 T u1|dividend[4]~0_combout $end
+$var wire 1 U word1[4]~input_o $end
+$var wire 1 V u2|load~combout $end
+$var wire 1 W u1|dividend[5]~1_combout $end
+$var wire 1 X word1[5]~input_o $end
+$var wire 1 Y word2[1]~input_o $end
+$var wire 1 Z u1|diff[0]~1 $end
+$var wire 1 [ u1|diff[1]~3 $end
+$var wire 1 \ u1|diff[2]~4_combout $end
+$var wire 1 ] u1|dividend[6]~2_combout $end
+$var wire 1 ^ u1|dividend[6]~feeder_combout $end
+$var wire 1 _ word1[6]~input_o $end
+$var wire 1 ` u1|dividend[7]~3_combout $end
+$var wire 1 a word1[7]~input_o $end
+$var wire 1 b u1|diff[2]~5 $end
+$var wire 1 c u1|diff[3]~7 $end
+$var wire 1 d u1|lt~0_combout $end
+$var wire 1 e word1[0]~input_o $end
+$var wire 1 f u1|dividend~4_combout $end
+$var wire 1 g u1|dividend~5_combout $end
+$var wire 1 h u2|ready~combout $end
+$var wire 1 i u1|divisor [3] $end
+$var wire 1 j u1|divisor [2] $end
+$var wire 1 k u1|divisor [1] $end
+$var wire 1 l u1|divisor [0] $end
+$var wire 1 m u1|dividend [7] $end
+$var wire 1 n u1|dividend [6] $end
+$var wire 1 o u1|dividend [5] $end
+$var wire 1 p u1|dividend [4] $end
+$var wire 1 q u1|dividend [3] $end
+$var wire 1 r u1|dividend [2] $end
+$var wire 1 s u1|dividend [1] $end
+$var wire 1 t u1|dividend [0] $end
+$var wire 1 u u2|count [1] $end
+$var wire 1 v u2|count [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+0#
+b10000 $
+b0 %
+x)
+x(
+x'
+x&
+x*
+x.
+x-
+x,
+x+
+x/
+00
+11
+x2
+13
+14
+15
+x6
+x7
+08
+09
+0:
+0;
+0<
+x=
+x>
+x?
+x@
+xA
+xB
+xC
+xD
+xE
+0F
+0G
+xH
+1I
+xJ
+xK
+0L
+0M
+xN
+xO
+xP
+xQ
+xR
+xS
+xT
+1U
+xV
+xW
+0X
+0Y
+xZ
+x[
+x\
+x]
+x^
+0_
+x`
+0a
+xb
+xc
+xd
+0e
+xf
+xg
+xh
+0l
+0k
+0j
+0i
+0t
+0s
+0r
+0q
+0p
+0o
+0n
+0m
+0v
+0u
+$end
+#970
+1Z
+#1043
+0[
+#1116
+1b
+#1130
+0R
+#1189
+0c
+#1547
+06
+#1620
+0\
+#1693
+07
+#1766
+0d
+#1987
+0S
+#2267
+0T
+#2481
+0W
+#2540
+0]
+#2663
+0`
+#2951
+0^
+#4576
+0J
+#4580
+0H
+#4594
+0K
+#4617
+0N
+#4808
+0P
+#4811
+0Q
+0V
+#4812
+1h
+#4813
+0O
+#4836
+0f
+#5413
+0g
+#6185
+0@
+0&
+#6433
+0?
+0'
+#6972
+0D
+0+
+#7061
+0=
+0)
+#7234
+0C
+0,
+#9033
+0>
+0(
+#10154
+0E
+0*
+#10560
+0A
+0.
+#10942
+0B
+0-
+#20000
+b1000 %
+b1010 %
+b1011 %
+1!
+0/
+#20726
+1F
+#20766
+1:
+#20776
+1Y
+#20786
+1<
+#40000
+0"
+1#
+0!
+1/
+#40726
+1G
+#40772
+0F
+#40782
+0I
+#45143
+1J
+1K
+#45146
+1H
+#45358
+1V
+#45360
+1O
+#45732
+0h
+#50923
+1E
+1*
+#60000
+1!
+0/
+#60726
+1F
+#62671
+1v
+1u
+1L
+#63153
+0K
+#63359
+1K
+#63516
+1h
+#63546
+0H
+#63876
+1p
+#63909
+1i
+1l
+1k
+#64660
+0Z
+#64689
+0V
+#64698
+17
+#64700
+1R
+#64733
+1[
+#64797
+1c
+#64806
+0b
+#64844
+1g
+#65267
+16
+#65340
+1\
+#65383
+07
+#65404
+1d
+#65707
+1`
+#65895
+1T
+#65983
+0g
+#66066
+1S
+#66213
+1W
+#66353
+0`
+#66477
+0T
+#68858
+0E
+0*
+#75001
+1A
+1.
+#80000
+0!
+1/
+#80772
+0F
+#100000
+0#
+1!
+0/
+#100726
+1F
+#100772
+0G
+#102671
+0v
+#103133
+1H
+#103361
+0J
+#103876
+0p
+1o
+#104656
+1]
+#104749
+0W
+#105000
+0\
+#105028
+06
+#105071
+1^
+#105092
+1b
+#105699
+17
+#110000
+b0 $
+1/
+#110772
+0U
+#114436
+0A
+0.
+#115146
+1B
+1-
+#120000
+b11 %
+b1 %
+b0 %
+0!
+0/
+#120772
+0F
+#120812
+0:
+#120822
+0Y
+#120832
+0<
+#140000
+1!
+1/
+#140726
+1F
+#142671
+1v
+0u
+#143153
+0H
+#143876
+0o
+1n
+#144675
+1`
+#144748
+0]
+#144947
+0c
+#144950
+0b
+#144984
+1\
+#145023
+1c
+#145159
+0^
+#151139
+1C
+1,
+#154818
+0B
+0-
+#160000
+0!
+0/
+#160772
+0F
+#180000
+1!
+1/
+#180726
+1F
+#182671
+0v
+#183362
+0K
+#183876
+0n
+1m
+#184551
+0d
+#184751
+0`
+#185021
+07
+#185154
+0S
+#185164
+1g
+#185177
+1]
+#185592
+1^
+#185612
+1T
+#190955
+1D
+1+
+#191110
+0C
+0,
+#200000
+0!
+0/
+#200772
+0F
+#220000
+1!
+1/
+#220726
+1F
+#222671
+0L
+#223606
+0h
+#223876
+1p
+1n
+0m
+#223951
+1t
+#224599
+1d
+#224663
+0O
+#224816
+0g
+#224994
+1f
+#224995
+1N
+#224999
+17
+#225000
+16
+#225619
+1g
+#225946
+1W
+#226008
+1`
+#228797
+1E
+1*
+#230848
+0D
+0+
+#231102
+1=
+1)
+#231139
+1C
+1,
+#235001
+1A
+1.
+#240000
+0!
+0/
+#240772
+0F
+#260000
+1!
+1/
+#260726
+1F
+#280000
+0!
+0/
+#280772
+0F
+#300000
+1!
+1/
+#300726
+1F
+#320000
+0!
+0/
+#320772
+0F
+#340000
+1!
+1/
+#340726
+1F
+#360000
+0!
+0/
+#360772
+0F
+#380000
+1!
+1/
+#380726
+1F
+#400000
+0!
+0/
+#400772
+0F
+#420000
+1!
+1/
+#420726
+1F
+#440000
+0!
+0/
+#440772
+0F
+#460000
+1!
+1/
+#460726
+1F
+#480000
+0!
+0/
+#480772
+0F
+#500000
+1!
+1/
+#500726
+1F
+#520000
+0!
+0/
+#520772
+0F
+#540000
+1!
+1/
+#540726
+1F
+#560000
+0!
+0/
+#560772
+0F
+#580000
+1!
+1/
+#580726
+1F
+#600000
+0!
+0/
+#600772
+0F
+#620000
+1!
+1/
+#620726
+1F
+#640000
+0!
+0/
+#640772
+0F
+#660000
+1!
+1/
+#660726
+1F
+#680000
+0!
+0/
+#680772
+0F
+#700000
+1!
+1/
+#700726
+1F
+#720000
+0!
+0/
+#720772
+0F
+#740000
+1!
+1/
+#740726
+1F
+#760000
+0!
+0/
+#760772
+0F
+#780000
+1!
+1/
+#780726
+1F
+#800000
+0!
+0/
+#800772
+0F
+#820000
+1!
+1/
+#820726
+1F
+#840000
+0!
+0/
+#840772
+0F
+#860000
+1!
+1/
+#860726
+1F
+#880000
+0!
+0/
+#880772
+0F
+#900000
+1!
+1/
+#900726
+1F
+#920000
+0!
+0/
+#920772
+0F
+#940000
+1!
+1/
+#940726
+1F
+#960000
+0!
+0/
+#960772
+0F
+#980000
+1!
+1/
+#980726
+1F
+#1000000

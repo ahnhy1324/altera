@@ -1,0 +1,258 @@
+Simulator report for div
+Sat Nov 20 21:51:04 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 79 nodes     ;
+; Simulation Coverage         ;      83.13 % ;
+; Total Number of Transitions ; 551          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C70F896C6 ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                       ;
++--------------------------------------------------------------------------------------------+-----------------------------+---------------+
+; Option                                                                                     ; Setting                     ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------------+---------------+
+; Simulation mode                                                                            ; Timing                      ; Timing        ;
+; Start time                                                                                 ; 0 ns                        ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                         ;               ;
+; Vector input source                                                                        ; D:/altera/test/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                          ; On            ;
+; Check outputs                                                                              ; Off                         ; Off           ;
+; Report simulation coverage                                                                 ; On                          ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                          ; On            ;
+; Display missing 1-value coverage report                                                    ; On                          ; On            ;
+; Display missing 0-value coverage report                                                    ; On                          ; On            ;
+; Detect setup and hold time violations                                                      ; Off                         ; Off           ;
+; Detect glitches                                                                            ; Off                         ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                         ; Off           ;
+; Generate Signal Activity File                                                              ; Off                         ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                         ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                         ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                          ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                  ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                         ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                        ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      83.13 % ;
+; Total nodes checked                                 ; 79           ;
+; Total output ports checked                          ; 83           ;
+; Total output ports with complete 1/0-value coverage ; 69           ;
+; Total output ports with no 1/0-value coverage       ; 12           ;
+; Total output ports with no 1-value coverage         ; 12           ;
+; Total output ports with no 0-value coverage         ; 14           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                  ;
++-------------------------------------+-------------------------------------+------------------+
+; Node Name                           ; Output Port Name                    ; Output Port Type ;
++-------------------------------------+-------------------------------------+------------------+
+; |div|datapath:u1|dividend[4]        ; |div|datapath:u1|dividend[4]        ; regout           ;
+; |div|datapath:u1|dividend[5]        ; |div|datapath:u1|dividend[5]        ; regout           ;
+; |div|datapath:u1|dividend[6]        ; |div|datapath:u1|dividend[6]        ; regout           ;
+; |div|datapath:u1|Add0~4             ; |div|datapath:u1|Add0~4             ; cout             ;
+; |div|datapath:u1|Add0~5             ; |div|datapath:u1|Add0~5             ; combout          ;
+; |div|datapath:u1|Add0~5             ; |div|datapath:u1|Add0~6             ; cout             ;
+; |div|datapath:u1|Add0~7             ; |div|datapath:u1|Add0~7             ; combout          ;
+; |div|datapath:u1|Add0~7             ; |div|datapath:u1|Add0~8             ; cout             ;
+; |div|datapath:u1|Add0~9             ; |div|datapath:u1|Add0~9             ; combout          ;
+; |div|datapath:u1|Add0~9             ; |div|datapath:u1|Add0~10            ; cout             ;
+; |div|datapath:u1|Add0~11            ; |div|datapath:u1|Add0~11            ; combout          ;
+; |div|datapath:u1|Add0~11            ; |div|datapath:u1|Add0~12            ; cout             ;
+; |div|datapath:u1|Add0~13            ; |div|datapath:u1|Add0~13            ; combout          ;
+; |div|datapath:u1|dividend[4]~0      ; |div|datapath:u1|dividend[4]~0      ; combout          ;
+; |div|datapath:u1|dividend[5]~1      ; |div|datapath:u1|dividend[5]~1      ; combout          ;
+; |div|datapath:u1|dividend[6]~2      ; |div|datapath:u1|dividend[6]~2      ; combout          ;
+; |div|datapath:u1|dividend[7]~3      ; |div|datapath:u1|dividend[7]~3      ; combout          ;
+; |div|datapath:u1|dividend[0]        ; |div|datapath:u1|dividend[0]        ; regout           ;
+; |div|datapath:u1|dividend[1]        ; |div|datapath:u1|dividend[1]        ; regout           ;
+; |div|datapath:u1|sign               ; |div|datapath:u1|sign               ; regout           ;
+; |div|datapath:u1|quotient[1]~0      ; |div|datapath:u1|quotient[1]~0      ; combout          ;
+; |div|datapath:u1|quotient[2]~1      ; |div|datapath:u1|quotient[2]~1      ; combout          ;
+; |div|datapath:u1|Add2~0             ; |div|datapath:u1|Add2~0             ; combout          ;
+; |div|datapath:u1|quotient[3]~2      ; |div|datapath:u1|quotient[3]~2      ; combout          ;
+; |div|controler:u2|state             ; |div|controler:u2|state             ; regout           ;
+; |div|controler:u2|ready             ; |div|controler:u2|ready             ; combout          ;
+; |div|datapath:u1|dividend~4         ; |div|datapath:u1|dividend~4         ; combout          ;
+; |div|datapath:u1|divisor[3]         ; |div|datapath:u1|divisor[3]         ; regout           ;
+; |div|datapath:u1|Add0~0             ; |div|datapath:u1|Add0~0             ; combout          ;
+; |div|datapath:u1|divisor[1]         ; |div|datapath:u1|divisor[1]         ; regout           ;
+; |div|datapath:u1|Add0~1             ; |div|datapath:u1|Add0~1             ; combout          ;
+; |div|datapath:u1|divisor[0]         ; |div|datapath:u1|divisor[0]         ; regout           ;
+; |div|datapath:u1|Add0~2             ; |div|datapath:u1|Add0~2             ; combout          ;
+; |div|datapath:u1|lt~0               ; |div|datapath:u1|lt~0               ; combout          ;
+; |div|datapath:u1|lt~1               ; |div|datapath:u1|lt~1               ; combout          ;
+; |div|datapath:u1|lt~2               ; |div|datapath:u1|lt~2               ; combout          ;
+; |div|datapath:u1|dividend~5         ; |div|datapath:u1|dividend~5         ; combout          ;
+; |div|datapath:u1|dividend~6         ; |div|datapath:u1|dividend~6         ; combout          ;
+; |div|datapath:u1|dividend~7         ; |div|datapath:u1|dividend~7         ; combout          ;
+; |div|datapath:u1|sign~0             ; |div|datapath:u1|sign~0             ; combout          ;
+; |div|controler:u2|load              ; |div|controler:u2|load              ; combout          ;
+; |div|datapath:u1|sign~1             ; |div|datapath:u1|sign~1             ; combout          ;
+; |div|datapath:u1|dividend~8         ; |div|datapath:u1|dividend~8         ; combout          ;
+; |div|datapath:u1|lt~3               ; |div|datapath:u1|lt~3               ; combout          ;
+; |div|controler:u2|shift             ; |div|controler:u2|shift             ; combout          ;
+; |div|datapath:u1|dividend[7]~10     ; |div|datapath:u1|dividend[7]~10     ; combout          ;
+; |div|controler:u2|count[0]          ; |div|controler:u2|count[0]          ; regout           ;
+; |div|controler:u2|count[1]          ; |div|controler:u2|count[1]          ; regout           ;
+; |div|controler:u2|state~0           ; |div|controler:u2|state~0           ; combout          ;
+; |div|controler:u2|count[0]~0        ; |div|controler:u2|count[0]~0        ; combout          ;
+; |div|controler:u2|count[1]~1        ; |div|controler:u2|count[1]~1        ; combout          ;
+; |div|quotient[0]                    ; |div|quotient[0]                    ; padio            ;
+; |div|quotient[1]                    ; |div|quotient[1]                    ; padio            ;
+; |div|quotient[2]                    ; |div|quotient[2]                    ; padio            ;
+; |div|quotient[3]                    ; |div|quotient[3]                    ; padio            ;
+; |div|remainder[0]                   ; |div|remainder[0]                   ; padio            ;
+; |div|remainder[1]                   ; |div|remainder[1]                   ; padio            ;
+; |div|remainder[2]                   ; |div|remainder[2]                   ; padio            ;
+; |div|ready                          ; |div|ready                          ; padio            ;
+; |div|reset                          ; |div|reset~corein                   ; combout          ;
+; |div|start                          ; |div|start~corein                   ; combout          ;
+; |div|clk                            ; |div|clk~corein                     ; combout          ;
+; |div|word2[3]                       ; |div|word2[3]~corein                ; combout          ;
+; |div|word1[4]                       ; |div|word1[4]~corein                ; combout          ;
+; |div|word2[1]                       ; |div|word2[1]~corein                ; combout          ;
+; |div|word2[0]                       ; |div|word2[0]~corein                ; combout          ;
+; |div|clk~clkctrl                    ; |div|clk~clkctrl                    ; outclk           ;
+; |div|reset~clkctrl                  ; |div|reset~clkctrl                  ; outclk           ;
+; |div|datapath:u1|dividend[7]~feeder ; |div|datapath:u1|dividend[7]~feeder ; combout          ;
++-------------------------------------+-------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                       ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |div|datapath:u1|dividend[7] ; |div|datapath:u1|dividend[7] ; regout           ;
+; |div|datapath:u1|dividend[3] ; |div|datapath:u1|dividend[3] ; regout           ;
+; |div|datapath:u1|divisor[2]  ; |div|datapath:u1|divisor[2]  ; regout           ;
+; |div|remainder[3]            ; |div|remainder[3]            ; padio            ;
+; |div|word1[0]                ; |div|word1[0]~corein         ; combout          ;
+; |div|word1[1]                ; |div|word1[1]~corein         ; combout          ;
+; |div|word1[7]                ; |div|word1[7]~corein         ; combout          ;
+; |div|word1[2]                ; |div|word1[2]~corein         ; combout          ;
+; |div|word1[3]                ; |div|word1[3]~corein         ; combout          ;
+; |div|word1[5]                ; |div|word1[5]~corein         ; combout          ;
+; |div|word1[6]                ; |div|word1[6]~corein         ; combout          ;
+; |div|word2[2]                ; |div|word2[2]~corein         ; combout          ;
++------------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                       ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |div|datapath:u1|dividend[7] ; |div|datapath:u1|dividend[7] ; regout           ;
+; |div|datapath:u1|dividend[2] ; |div|datapath:u1|dividend[2] ; regout           ;
+; |div|datapath:u1|dividend[3] ; |div|datapath:u1|dividend[3] ; regout           ;
+; |div|datapath:u1|divisor[2]  ; |div|datapath:u1|divisor[2]  ; regout           ;
+; |div|datapath:u1|dividend~9  ; |div|datapath:u1|dividend~9  ; combout          ;
+; |div|remainder[3]            ; |div|remainder[3]            ; padio            ;
+; |div|word1[0]                ; |div|word1[0]~corein         ; combout          ;
+; |div|word1[1]                ; |div|word1[1]~corein         ; combout          ;
+; |div|word1[7]                ; |div|word1[7]~corein         ; combout          ;
+; |div|word1[2]                ; |div|word1[2]~corein         ; combout          ;
+; |div|word1[3]                ; |div|word1[3]~corein         ; combout          ;
+; |div|word1[5]                ; |div|word1[5]~corein         ; combout          ;
+; |div|word1[6]                ; |div|word1[6]~corein         ; combout          ;
+; |div|word2[2]                ; |div|word2[2]~corein         ; combout          ;
++------------------------------+------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Nov 20 21:51:04 2021
+Info: Command: quartus_sim --simulation_results_format=VWF div -c div
+Info (324025): Using vector source file "D:/altera/test/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      83.13 %
+Info (328052): Number of transitions in simulation is 551
+Info (324045): Vector file div.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4479 megabytes
+    Info: Processing ended: Sat Nov 20 21:51:04 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

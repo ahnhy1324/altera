@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\altera\mulmul\simulation\qsim
+vmulmul
+Z1 !s100 PoUBNGOUa@fEB]O6DObPO3
+Z2 I3iAf?QbIZ@me;e?D_F<]h3
+Z3 VzGBKYDXZZ;oD=R<3`n]6l1
+Z4 dD:\altera\mulmul\simulation\qsim
+Z5 w1637118350
+Z6 8mulmul.vo
+Z7 Fmulmul.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|mulmul.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1637118351.047000
+Z12 !s107 mulmul.vo|
+!s101 -O0
+vmulmul_vlg_check_tst
+!i10b 1
+Z13 !s100 :ogzAHD77B6XCmjQX:Cm61
+Z14 IfW=hZmofRCVDIiAPnO@;B1
+Z15 VOElioYAQ1^j8jRoc06XdS1
+R4
+R5
+Z16 8mulmul.vt
+Z17 Fmulmul.vt
+L0 67
+R8
+r1
+!s85 0
+31
+Z18 !s108 1637118351.085000
+Z19 !s107 mulmul.vt|
+Z20 !s90 -work|work|mulmul.vt|
+!s101 -O0
+R10
+vmulmul_vlg_sample_tst
+!i10b 1
+Z21 !s100 nnSaUDF8dnZ4L0[L2ePn60
+Z22 ICm7Xhm]E]A4``L?HR_Fkk3
+Z23 V9KTMTicoP?l1LPk2_31ZF1
+R4
+R5
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+vmulmul_vlg_vec_tst
+!i10b 1
+Z24 !s100 J47P9n6m<JlQj]DI>hE<h3
+Z25 IGa_h`bVR[TABLm_zI`:7c3
+Z26 V]1;kjE8Q`[4mo]ZdmZZG?0
+R4
+R5
+R16
+R17
+Z27 L0 314
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10

@@ -1,0 +1,11 @@
+[I/O]
+ALTCHIP_ID = "%t" "%w/../common/lib/megawizard.pl" --wizard:altchip_id  --early_gen:on --wizard_file:"%w/source/altchip_id_hw.tcl" --family_parameter:device_family %f %o %h
+<INFO>
+<QIP_FILE_ENABLED/>
+<ACCEPT_OTHER_CNX VALUE="ON"/>
+<DEVICE_FAMILY   SUPPORTED="NONE | Stratix V | Arria V | Cyclone V"   SUPPORT_CHECK="ON" /> 
+<LANGUAGES   AHDL="OFF"/>
+<PINPLAN SUPPORTED="ON"/>
+<ALIAS>Altera Unique Chip ID</ALIAS>
+<ALIAS>Altera Unique Chip ID v13.0</ALIAS>
+</INFO>

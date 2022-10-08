@@ -1,0 +1,25 @@
+Log started 10/28/2021 at 14:03:18
+Preferred installation mode : unattended
+Trying to init installer in mode unattended
+Mode unattended successfully initialized
+Preparing to Install
+Preparing to Install
+Unpacking files
+Unpacking files
+Installing Quartus II Help files...
+Executing D:\altera/quartus/bin/unzip.exe -q -o "D:\altera/quartus/common/help/webhelp.zip"
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Creating Uninstaller
+Creating uninstaller 25%
+Creating uninstaller 50%
+Creating uninstaller 75%
+Creating uninstaller 100%
+Installation completed
+Log finished 10/28/2021 at 14:03:54

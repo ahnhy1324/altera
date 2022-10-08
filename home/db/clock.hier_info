@@ -1,0 +1,364 @@
+|clock
+mod => mode[6].CLK
+mod => mode[5].CLK
+mod => mode[4].CLK
+mod => mode[3].CLK
+mod => mode[2].CLK
+mod => mode[1].CLK
+mod => mode[0].CLK
+reset => reset.IN1
+clk => clk.IN2
+display[6] <= led:u1.port1
+display[5] <= led:u1.port1
+display[4] <= led:u1.port1
+display[3] <= led:u1.port1
+display[2] <= led:u1.port1
+display[1] <= led:u1.port1
+display[0] <= led:u1.port1
+display10[6] <= led:u2.port1
+display10[5] <= led:u2.port1
+display10[4] <= led:u2.port1
+display10[3] <= led:u2.port1
+display10[2] <= led:u2.port1
+display10[1] <= led:u2.port1
+display10[0] <= led:u2.port1
+min1[6] <= led:u3.port1
+min1[5] <= led:u3.port1
+min1[4] <= led:u3.port1
+min1[3] <= led:u3.port1
+min1[2] <= led:u3.port1
+min1[1] <= led:u3.port1
+min1[0] <= led:u3.port1
+min10[6] <= led:u4.port1
+min10[5] <= led:u4.port1
+min10[4] <= led:u4.port1
+min10[3] <= led:u4.port1
+min10[2] <= led:u4.port1
+min10[1] <= led:u4.port1
+min10[0] <= led:u4.port1
+hour[6] <= led:k1.port1
+hour[5] <= led:k1.port1
+hour[4] <= led:k1.port1
+hour[3] <= led:k1.port1
+hour[2] <= led:k1.port1
+hour[1] <= led:k1.port1
+hour[0] <= led:k1.port1
+hour10[6] <= led:k2.port1
+hour10[5] <= led:k2.port1
+hour10[4] <= led:k2.port1
+hour10[3] <= led:k2.port1
+hour10[2] <= led:k2.port1
+hour10[1] <= led:k2.port1
+hour10[0] <= led:k2.port1
+
+
+|clock|clk1hz:comb_3
+clk50 => clk50.IN1
+clk1 <= clk1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock|clk1hz:comb_3|counterN:u1
+clk => qout[0]~reg0.CLK
+clk => qout[1]~reg0.CLK
+clk => qout[2]~reg0.CLK
+clk => qout[3]~reg0.CLK
+clk => qout[4]~reg0.CLK
+clk => qout[5]~reg0.CLK
+clk => qout[6]~reg0.CLK
+clk => qout[7]~reg0.CLK
+clk => qout[8]~reg0.CLK
+clk => qout[9]~reg0.CLK
+clk => qout[10]~reg0.CLK
+clk => qout[11]~reg0.CLK
+clk => qout[12]~reg0.CLK
+clk => qout[13]~reg0.CLK
+clk => qout[14]~reg0.CLK
+clk => qout[15]~reg0.CLK
+clk => qout[16]~reg0.CLK
+clk => qout[17]~reg0.CLK
+clk => qout[18]~reg0.CLK
+clk => qout[19]~reg0.CLK
+clk => qout[20]~reg0.CLK
+clk => qout[21]~reg0.CLK
+clk => qout[22]~reg0.CLK
+clk => qout[23]~reg0.CLK
+clk => qout[24]~reg0.CLK
+reset => qout[0]~reg0.ACLR
+reset => qout[1]~reg0.ACLR
+reset => qout[2]~reg0.ACLR
+reset => qout[3]~reg0.ACLR
+reset => qout[4]~reg0.ACLR
+reset => qout[5]~reg0.ACLR
+reset => qout[6]~reg0.ACLR
+reset => qout[7]~reg0.ACLR
+reset => qout[8]~reg0.ACLR
+reset => qout[9]~reg0.ACLR
+reset => qout[10]~reg0.ACLR
+reset => qout[11]~reg0.ACLR
+reset => qout[12]~reg0.ACLR
+reset => qout[13]~reg0.ACLR
+reset => qout[14]~reg0.ACLR
+reset => qout[15]~reg0.ACLR
+reset => qout[16]~reg0.ACLR
+reset => qout[17]~reg0.ACLR
+reset => qout[18]~reg0.ACLR
+reset => qout[19]~reg0.ACLR
+reset => qout[20]~reg0.ACLR
+reset => qout[21]~reg0.ACLR
+reset => qout[22]~reg0.ACLR
+reset => qout[23]~reg0.ACLR
+reset => qout[24]~reg0.ACLR
+enable => tc.IN1
+enable => qout[0]~reg0.ENA
+enable => qout[24]~reg0.ENA
+enable => qout[23]~reg0.ENA
+enable => qout[22]~reg0.ENA
+enable => qout[21]~reg0.ENA
+enable => qout[20]~reg0.ENA
+enable => qout[19]~reg0.ENA
+enable => qout[18]~reg0.ENA
+enable => qout[17]~reg0.ENA
+enable => qout[16]~reg0.ENA
+enable => qout[15]~reg0.ENA
+enable => qout[14]~reg0.ENA
+enable => qout[13]~reg0.ENA
+enable => qout[12]~reg0.ENA
+enable => qout[11]~reg0.ENA
+enable => qout[10]~reg0.ENA
+enable => qout[9]~reg0.ENA
+enable => qout[8]~reg0.ENA
+enable => qout[7]~reg0.ENA
+enable => qout[6]~reg0.ENA
+enable => qout[5]~reg0.ENA
+enable => qout[4]~reg0.ENA
+enable => qout[3]~reg0.ENA
+enable => qout[2]~reg0.ENA
+enable => qout[1]~reg0.ENA
+qout[0] <= qout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[1] <= qout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[2] <= qout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[3] <= qout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[4] <= qout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[5] <= qout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[6] <= qout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[7] <= qout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[8] <= qout[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[9] <= qout[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[10] <= qout[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[11] <= qout[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[12] <= qout[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[13] <= qout[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[14] <= qout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[15] <= qout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[16] <= qout[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[17] <= qout[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[18] <= qout[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[19] <= qout[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[20] <= qout[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[21] <= qout[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[22] <= qout[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[23] <= qout[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[24] <= qout[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock|led:u1
+bcd[0] => Decoder0.IN4
+bcd[1] => Decoder0.IN3
+bcd[2] => Decoder0.IN2
+bcd[3] => Decoder0.IN1
+bcd[4] => Decoder0.IN0
+disp[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+disp[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+disp[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+disp[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock|led:u2
+bcd[0] => Decoder0.IN4
+bcd[1] => Decoder0.IN3
+bcd[2] => Decoder0.IN2
+bcd[3] => Decoder0.IN1
+bcd[4] => Decoder0.IN0
+disp[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+disp[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+disp[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+disp[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock|led:u3
+bcd[0] => Decoder0.IN4
+bcd[1] => Decoder0.IN3
+bcd[2] => Decoder0.IN2
+bcd[3] => Decoder0.IN1
+bcd[4] => Decoder0.IN0
+disp[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+disp[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+disp[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+disp[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock|led:u4
+bcd[0] => Decoder0.IN4
+bcd[1] => Decoder0.IN3
+bcd[2] => Decoder0.IN2
+bcd[3] => Decoder0.IN1
+bcd[4] => Decoder0.IN0
+disp[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+disp[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+disp[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+disp[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock|led:k1
+bcd[0] => Decoder0.IN4
+bcd[1] => Decoder0.IN3
+bcd[2] => Decoder0.IN2
+bcd[3] => Decoder0.IN1
+bcd[4] => Decoder0.IN0
+disp[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+disp[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+disp[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+disp[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock|led:k2
+bcd[0] => Decoder0.IN4
+bcd[1] => Decoder0.IN3
+bcd[2] => Decoder0.IN2
+bcd[3] => Decoder0.IN1
+bcd[4] => Decoder0.IN0
+disp[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+disp[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+disp[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+disp[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock|counterN:u5
+clk => qout[0]~reg0.CLK
+clk => qout[1]~reg0.CLK
+clk => qout[2]~reg0.CLK
+clk => qout[3]~reg0.CLK
+reset => qout[0]~reg0.ACLR
+reset => qout[1]~reg0.ACLR
+reset => qout[2]~reg0.ACLR
+reset => qout[3]~reg0.ACLR
+enable => tc.IN1
+enable => qout[0]~reg0.ENA
+enable => qout[3]~reg0.ENA
+enable => qout[2]~reg0.ENA
+enable => qout[1]~reg0.ENA
+qout[0] <= qout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[1] <= qout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[2] <= qout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[3] <= qout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock|counterN:u7
+clk => qout[0]~reg0.CLK
+clk => qout[1]~reg0.CLK
+clk => qout[2]~reg0.CLK
+reset => qout[0]~reg0.ACLR
+reset => qout[1]~reg0.ACLR
+reset => qout[2]~reg0.ACLR
+enable => tc.IN1
+enable => qout[0]~reg0.ENA
+enable => qout[2]~reg0.ENA
+enable => qout[1]~reg0.ENA
+qout[0] <= qout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[1] <= qout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[2] <= qout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock|counterN:u6
+clk => qout[0]~reg0.CLK
+clk => qout[1]~reg0.CLK
+clk => qout[2]~reg0.CLK
+clk => qout[3]~reg0.CLK
+reset => qout[0]~reg0.ACLR
+reset => qout[1]~reg0.ACLR
+reset => qout[2]~reg0.ACLR
+reset => qout[3]~reg0.ACLR
+enable => tc.IN1
+enable => qout[0]~reg0.ENA
+enable => qout[3]~reg0.ENA
+enable => qout[2]~reg0.ENA
+enable => qout[1]~reg0.ENA
+qout[0] <= qout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[1] <= qout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[2] <= qout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[3] <= qout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock|counterN:u8
+clk => qout[0]~reg0.CLK
+clk => qout[1]~reg0.CLK
+clk => qout[2]~reg0.CLK
+reset => qout[0]~reg0.ACLR
+reset => qout[1]~reg0.ACLR
+reset => qout[2]~reg0.ACLR
+enable => tc.IN1
+enable => qout[0]~reg0.ENA
+enable => qout[2]~reg0.ENA
+enable => qout[1]~reg0.ENA
+qout[0] <= qout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[1] <= qout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[2] <= qout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock|counterN:u9
+clk => qout[0]~reg0.CLK
+clk => qout[1]~reg0.CLK
+clk => qout[2]~reg0.CLK
+clk => qout[3]~reg0.CLK
+clk => qout[4]~reg0.CLK
+reset => qout[0]~reg0.ACLR
+reset => qout[1]~reg0.ACLR
+reset => qout[2]~reg0.ACLR
+reset => qout[3]~reg0.ACLR
+reset => qout[4]~reg0.ACLR
+enable => tc.IN1
+enable => qout[0]~reg0.ENA
+enable => qout[4]~reg0.ENA
+enable => qout[3]~reg0.ENA
+enable => qout[2]~reg0.ENA
+enable => qout[1]~reg0.ENA
+qout[0] <= qout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[1] <= qout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[2] <= qout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[3] <= qout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[4] <= qout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock|pulse:u10
+clk => d1.CLK
+clk => d0.CLK
+reset => d1.ACLR
+reset => d0.ACLR
+button_in => d0.DATAIN
+button_out <= button_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

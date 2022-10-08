@@ -1,0 +1,279 @@
+Simulator report for devide
+Sat Nov 20 05:34:05 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 65 nodes     ;
+; Simulation Coverage         ;      21.74 % ;
+; Total Number of Transitions ; 134          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C70F896C6 ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                           ;
++--------------------------------------------------------------------------------------------+---------------------------------+---------------+
+; Option                                                                                     ; Setting                         ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------+---------------+
+; Simulation mode                                                                            ; Timing                          ; Timing        ;
+; Start time                                                                                 ; 0 ns                            ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                             ;               ;
+; Vector input source                                                                        ; D:/altera/homework/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                              ; On            ;
+; Check outputs                                                                              ; Off                             ; Off           ;
+; Report simulation coverage                                                                 ; On                              ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                              ; On            ;
+; Display missing 1-value coverage report                                                    ; On                              ; On            ;
+; Display missing 0-value coverage report                                                    ; On                              ; On            ;
+; Detect setup and hold time violations                                                      ; Off                             ; Off           ;
+; Detect glitches                                                                            ; Off                             ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                             ; Off           ;
+; Generate Signal Activity File                                                              ; Off                             ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                             ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                             ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                              ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                      ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                             ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                             ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                            ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      21.74 % ;
+; Total nodes checked                                 ; 65           ;
+; Total output ports checked                          ; 69           ;
+; Total output ports with complete 1/0-value coverage ; 15           ;
+; Total output ports with no 1/0-value coverage       ; 45           ;
+; Total output ports with no 1-value coverage         ; 49           ;
+; Total output ports with no 0-value coverage         ; 50           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                            ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |divide|datapath:u1|dividend~5   ; |divide|datapath:u1|dividend~5   ; combout          ;
+; |divide|datapath:u1|dividend~6   ; |divide|datapath:u1|dividend~6   ; combout          ;
+; |divide|controller:u2|load       ; |divide|controller:u2|load       ; combout          ;
+; |divide|controller:u2|state~0    ; |divide|controller:u2|state~0    ; combout          ;
+; |divide|controller:u2|count[0]~0 ; |divide|controller:u2|count[0]~0 ; combout          ;
+; |divide|controller:u2|count[1]~1 ; |divide|controller:u2|count[1]~1 ; combout          ;
+; |divide|start                    ; |divide|start~corein             ; combout          ;
+; |divide|clk                      ; |divide|clk~corein               ; combout          ;
+; |divide|word1[4]                 ; |divide|word1[4]~corein          ; combout          ;
+; |divide|word1[5]                 ; |divide|word1[5]~corein          ; combout          ;
+; |divide|word1[7]                 ; |divide|word1[7]~corein          ; combout          ;
+; |divide|word2[3]                 ; |divide|word2[3]~corein          ; combout          ;
+; |divide|word2[1]                 ; |divide|word2[1]~corein          ; combout          ;
+; |divide|word2[0]                 ; |divide|word2[0]~corein          ; combout          ;
+; |divide|clk~clkctrl              ; |divide|clk~clkctrl              ; outclk           ;
++----------------------------------+----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                           ;
++----------------------------------------+----------------------------------------+------------------+
+; Node Name                              ; Output Port Name                       ; Output Port Type ;
++----------------------------------------+----------------------------------------+------------------+
+; |divide|datapath:u1|dividend[4]        ; |divide|datapath:u1|dividend[4]        ; regout           ;
+; |divide|datapath:u1|dividend[5]        ; |divide|datapath:u1|dividend[5]        ; regout           ;
+; |divide|datapath:u1|dividend[6]        ; |divide|datapath:u1|dividend[6]        ; regout           ;
+; |divide|datapath:u1|dividend[7]        ; |divide|datapath:u1|dividend[7]        ; regout           ;
+; |divide|datapath:u1|diff[0]~0          ; |divide|datapath:u1|diff[0]~0          ; combout          ;
+; |divide|datapath:u1|diff[0]~0          ; |divide|datapath:u1|diff[0]~1          ; cout             ;
+; |divide|datapath:u1|diff[1]~2          ; |divide|datapath:u1|diff[1]~2          ; combout          ;
+; |divide|datapath:u1|diff[1]~2          ; |divide|datapath:u1|diff[1]~3          ; cout             ;
+; |divide|datapath:u1|diff[2]~4          ; |divide|datapath:u1|diff[2]~4          ; combout          ;
+; |divide|datapath:u1|diff[2]~4          ; |divide|datapath:u1|diff[2]~5          ; cout             ;
+; |divide|datapath:u1|diff[3]~6          ; |divide|datapath:u1|diff[3]~6          ; combout          ;
+; |divide|datapath:u1|diff[3]~6          ; |divide|datapath:u1|diff[3]~7          ; cout             ;
+; |divide|datapath:u1|lt~0               ; |divide|datapath:u1|lt~0               ; combout          ;
+; |divide|datapath:u1|dividend[4]~0      ; |divide|datapath:u1|dividend[4]~0      ; combout          ;
+; |divide|datapath:u1|dividend[5]~1      ; |divide|datapath:u1|dividend[5]~1      ; combout          ;
+; |divide|datapath:u1|dividend[6]~2      ; |divide|datapath:u1|dividend[6]~2      ; combout          ;
+; |divide|datapath:u1|dividend[7]~3      ; |divide|datapath:u1|dividend[7]~3      ; combout          ;
+; |divide|datapath:u1|dividend[1]        ; |divide|datapath:u1|dividend[1]        ; regout           ;
+; |divide|datapath:u1|dividend[2]        ; |divide|datapath:u1|dividend[2]        ; regout           ;
+; |divide|datapath:u1|dividend[3]        ; |divide|datapath:u1|dividend[3]        ; regout           ;
+; |divide|controller:u2|ready            ; |divide|controller:u2|ready            ; combout          ;
+; |divide|datapath:u1|divisor[3]         ; |divide|datapath:u1|divisor[3]         ; regout           ;
+; |divide|datapath:u1|divisor[2]         ; |divide|datapath:u1|divisor[2]         ; regout           ;
+; |divide|datapath:u1|divisor[1]         ; |divide|datapath:u1|divisor[1]         ; regout           ;
+; |divide|datapath:u1|divisor[0]         ; |divide|datapath:u1|divisor[0]         ; regout           ;
+; |divide|datapath:u1|dividend~7         ; |divide|datapath:u1|dividend~7         ; combout          ;
+; |divide|datapath:u1|dividend~8         ; |divide|datapath:u1|dividend~8         ; combout          ;
+; |divide|datapath:u1|dividend~9         ; |divide|datapath:u1|dividend~9         ; combout          ;
+; |divide|controller:u2|count[0]         ; |divide|controller:u2|count[0]         ; regout           ;
+; |divide|controller:u2|count[1]         ; |divide|controller:u2|count[1]         ; regout           ;
+; |divide|quotient[1]                    ; |divide|quotient[1]                    ; padio            ;
+; |divide|quotient[2]                    ; |divide|quotient[2]                    ; padio            ;
+; |divide|quotient[3]                    ; |divide|quotient[3]                    ; padio            ;
+; |divide|remainder[0]                   ; |divide|remainder[0]                   ; padio            ;
+; |divide|remainder[1]                   ; |divide|remainder[1]                   ; padio            ;
+; |divide|remainder[2]                   ; |divide|remainder[2]                   ; padio            ;
+; |divide|remainder[3]                   ; |divide|remainder[3]                   ; padio            ;
+; |divide|reset                          ; |divide|reset~corein                   ; combout          ;
+; |divide|word1[0]                       ; |divide|word1[0]~corein                ; combout          ;
+; |divide|word1[1]                       ; |divide|word1[1]~corein                ; combout          ;
+; |divide|word1[2]                       ; |divide|word1[2]~corein                ; combout          ;
+; |divide|word1[3]                       ; |divide|word1[3]~corein                ; combout          ;
+; |divide|word1[6]                       ; |divide|word1[6]~corein                ; combout          ;
+; |divide|word2[2]                       ; |divide|word2[2]~corein                ; combout          ;
+; |divide|reset~clkctrl                  ; |divide|reset~clkctrl                  ; outclk           ;
+; |divide|datapath:u1|dividend[4]~feeder ; |divide|datapath:u1|dividend[4]~feeder ; combout          ;
+; |divide|datapath:u1|dividend[5]~feeder ; |divide|datapath:u1|dividend[5]~feeder ; combout          ;
+; |divide|datapath:u1|dividend[6]~feeder ; |divide|datapath:u1|dividend[6]~feeder ; combout          ;
+; |divide|datapath:u1|dividend[7]~feeder ; |divide|datapath:u1|dividend[7]~feeder ; combout          ;
++----------------------------------------+----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                           ;
++----------------------------------------+----------------------------------------+------------------+
+; Node Name                              ; Output Port Name                       ; Output Port Type ;
++----------------------------------------+----------------------------------------+------------------+
+; |divide|datapath:u1|dividend[4]        ; |divide|datapath:u1|dividend[4]        ; regout           ;
+; |divide|datapath:u1|dividend[5]        ; |divide|datapath:u1|dividend[5]        ; regout           ;
+; |divide|datapath:u1|dividend[6]        ; |divide|datapath:u1|dividend[6]        ; regout           ;
+; |divide|datapath:u1|dividend[7]        ; |divide|datapath:u1|dividend[7]        ; regout           ;
+; |divide|datapath:u1|diff[0]~0          ; |divide|datapath:u1|diff[0]~0          ; combout          ;
+; |divide|datapath:u1|diff[0]~0          ; |divide|datapath:u1|diff[0]~1          ; cout             ;
+; |divide|datapath:u1|diff[1]~2          ; |divide|datapath:u1|diff[1]~2          ; combout          ;
+; |divide|datapath:u1|diff[1]~2          ; |divide|datapath:u1|diff[1]~3          ; cout             ;
+; |divide|datapath:u1|diff[2]~4          ; |divide|datapath:u1|diff[2]~4          ; combout          ;
+; |divide|datapath:u1|diff[2]~4          ; |divide|datapath:u1|diff[2]~5          ; cout             ;
+; |divide|datapath:u1|diff[3]~6          ; |divide|datapath:u1|diff[3]~6          ; combout          ;
+; |divide|datapath:u1|diff[3]~6          ; |divide|datapath:u1|diff[3]~7          ; cout             ;
+; |divide|datapath:u1|lt~0               ; |divide|datapath:u1|lt~0               ; combout          ;
+; |divide|datapath:u1|dividend[4]~0      ; |divide|datapath:u1|dividend[4]~0      ; combout          ;
+; |divide|datapath:u1|dividend[5]~1      ; |divide|datapath:u1|dividend[5]~1      ; combout          ;
+; |divide|datapath:u1|dividend[6]~2      ; |divide|datapath:u1|dividend[6]~2      ; combout          ;
+; |divide|datapath:u1|dividend[7]~3      ; |divide|datapath:u1|dividend[7]~3      ; combout          ;
+; |divide|datapath:u1|dividend[0]        ; |divide|datapath:u1|dividend[0]        ; regout           ;
+; |divide|datapath:u1|dividend[1]        ; |divide|datapath:u1|dividend[1]        ; regout           ;
+; |divide|datapath:u1|dividend[2]        ; |divide|datapath:u1|dividend[2]        ; regout           ;
+; |divide|datapath:u1|dividend[3]        ; |divide|datapath:u1|dividend[3]        ; regout           ;
+; |divide|controller:u2|state            ; |divide|controller:u2|state            ; regout           ;
+; |divide|datapath:u1|dividend~4         ; |divide|datapath:u1|dividend~4         ; combout          ;
+; |divide|datapath:u1|divisor[3]         ; |divide|datapath:u1|divisor[3]         ; regout           ;
+; |divide|datapath:u1|divisor[2]         ; |divide|datapath:u1|divisor[2]         ; regout           ;
+; |divide|datapath:u1|divisor[1]         ; |divide|datapath:u1|divisor[1]         ; regout           ;
+; |divide|datapath:u1|divisor[0]         ; |divide|datapath:u1|divisor[0]         ; regout           ;
+; |divide|datapath:u1|dividend~8         ; |divide|datapath:u1|dividend~8         ; combout          ;
+; |divide|datapath:u1|dividend~9         ; |divide|datapath:u1|dividend~9         ; combout          ;
+; |divide|controller:u2|count[0]         ; |divide|controller:u2|count[0]         ; regout           ;
+; |divide|controller:u2|count[1]         ; |divide|controller:u2|count[1]         ; regout           ;
+; |divide|quotient[0]                    ; |divide|quotient[0]                    ; padio            ;
+; |divide|quotient[1]                    ; |divide|quotient[1]                    ; padio            ;
+; |divide|quotient[2]                    ; |divide|quotient[2]                    ; padio            ;
+; |divide|quotient[3]                    ; |divide|quotient[3]                    ; padio            ;
+; |divide|remainder[0]                   ; |divide|remainder[0]                   ; padio            ;
+; |divide|remainder[1]                   ; |divide|remainder[1]                   ; padio            ;
+; |divide|remainder[2]                   ; |divide|remainder[2]                   ; padio            ;
+; |divide|remainder[3]                   ; |divide|remainder[3]                   ; padio            ;
+; |divide|ready                          ; |divide|ready                          ; padio            ;
+; |divide|word1[0]                       ; |divide|word1[0]~corein                ; combout          ;
+; |divide|word1[1]                       ; |divide|word1[1]~corein                ; combout          ;
+; |divide|word1[2]                       ; |divide|word1[2]~corein                ; combout          ;
+; |divide|word1[3]                       ; |divide|word1[3]~corein                ; combout          ;
+; |divide|word1[6]                       ; |divide|word1[6]~corein                ; combout          ;
+; |divide|word2[2]                       ; |divide|word2[2]~corein                ; combout          ;
+; |divide|datapath:u1|dividend[4]~feeder ; |divide|datapath:u1|dividend[4]~feeder ; combout          ;
+; |divide|datapath:u1|dividend[5]~feeder ; |divide|datapath:u1|dividend[5]~feeder ; combout          ;
+; |divide|datapath:u1|dividend[6]~feeder ; |divide|datapath:u1|dividend[6]~feeder ; combout          ;
+; |divide|datapath:u1|dividend[7]~feeder ; |divide|datapath:u1|dividend[7]~feeder ; combout          ;
++----------------------------------------+----------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Nov 20 05:34:05 2021
+Info: Command: quartus_sim --simulation_results_format=VWF devide -c devide
+Info (324025): Using vector source file "D:/altera/homework/Waveform.vwf"
+Info (328054): Inverted registers were found during simulation
+    Info (328055): Register: |divide|controller:u2|state
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      21.74 %
+Info (328052): Number of transitions in simulation is 134
+Info (324045): Vector file devide.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4479 megabytes
+    Info: Processing ended: Sat Nov 20 05:34:05 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

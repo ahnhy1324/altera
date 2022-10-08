@@ -1,0 +1,145 @@
+Log started 10/28/2021 at 13:52:38
+Preferred installation mode : qt
+Trying to init installer in mode qt
+Mode qt successfully initialized
+Preparing to Install
+Preparing to Install
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Installing Quartus II Help...
+Executing C:\Users\mache\OneDrive\?? ??\Quartus-web-13.0.1.232-windows\components/QuartusHelpSetup-13.0.1.232.exe --mode unattended --unattendedmodeui minimal --installdir "D:\altera"  --product_copy_name "(Copy 4)" --startmenugroup_name "Altera 13.0.1.232 Web Edition"  --startmenufolder_name "Quartus II Web Edition 13.0.1.232 (Copy 4)"
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Unpacking files
+Installing Arria II...
+Executing D:\altera/quartus/bin/unzip.exe -q -o "C:\Users\mache\OneDrive\?? ??\Quartus-web-13.0.1.232-windows\components/arria_web-13.0.1.232.qdz"
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Unpacking files
+Installing Cyclone II/III/IV...
+Executing D:\altera/quartus/bin/unzip.exe -q -o "C:\Users\mache\OneDrive\?? ??\Quartus-web-13.0.1.232-windows\components/cyclone_web-13.0.1.232.qdz"
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Unpacking files
+Installing Cyclone V...
+Executing D:\altera/quartus/bin/unzip.exe -q -o "C:\Users\mache\OneDrive\?? ??\Quartus-web-13.0.1.232-windows\components/cyclonev-13.0.1.232.qdz"
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Unpacking files
+Installing MAX II/V, MAX 3000/7000...
+Executing D:\altera/quartus/bin/unzip.exe -q -o "C:\Users\mache\OneDrive\?? ??\Quartus-web-13.0.1.232-windows\components/max_web-13.0.1.232.qdz"
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Unpacking files
+Installing ModelSim-Altera Starter Edition (Free)...
+Executing C:\Users\mache\OneDrive\?? ??\Quartus-web-13.0.1.232-windows\components/ModelSimSetup-13.0.1.232.exe --mode unattended --unattendedmodeui minimal --installdir "D:\altera" --modelsim_edition modelsim_ase --product_copy_name "(Copy 4)" --startmenugroup_name "Altera 13.0.1.232 Web Edition" 
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Executing D:\altera/vcredist2010_x86.exe /q /norestart
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Creating Uninstaller
+Creating uninstaller 25%
+Creating uninstaller 50%
+Creating uninstaller 75%
+Creating uninstaller 100%
+Installation completed
+Log finished 10/28/2021 at 14:06:51
+Executing D:\altera/quartus/bin/qreg.exe --force --tb2id --setqdir --file_assoc --jtag
+Script exit code: 0
+
+Script output:
+ Authorized application D:\altera\quartus\bin64\jtagserver.exe is disabled in the firewall.
+Authorized application D:\altera\quartus\bin64\jtagserver.exe is now enabled in the firewall.
+
+Script stderr:
+ Qt: Untested Windows version 6.2 detected!
+
+Executing D:\altera/quartus/bin64/qreg.exe --force --setqdir --file_assoc --jtag
+Script exit code: 0
+
+Script output:
+ Authorized application D:\altera\quartus\bin64\jtagserver.exe is enabled in the firewall.
+
+Script stderr:
+ Qt: Untested Windows version 6.2 detected!
+
+Executing D:\altera/quartus/bin64/quartus.exe &
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+

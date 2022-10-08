@@ -1,0 +1,34 @@
+# do devide.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module divide
+# 
+# Top level modules:
+# 	divide
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module divide_vlg_sample_tst
+# -- Compiling module divide_vlg_check_tst
+# -- Compiling module divide_vlg_vec_tst
+# 
+# Top level modules:
+# 	divide_vlg_vec_tst
+# vsim -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.divide_vlg_vec_tst 
+# Loading work.divide_vlg_vec_tst
+# Loading work.divide
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading work.divide_vlg_sample_tst
+# Loading work.divide_vlg_check_tst
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading instances from devide_v.sdo
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from devide_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /divide_vlg_vec_tst File: devide.vt
+# Simulation passed !
+# ** Note: $finish    : devide.vt(316)
+#    Time: 1 us  Iteration: 0  Instance: /divide_vlg_vec_tst/tb_out

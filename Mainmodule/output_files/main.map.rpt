@@ -1,0 +1,1233 @@
+Analysis & Synthesis report for main
+Mon Dec 20 06:28:46 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: selector:sel|stopwatch:watch|clk001hz:comb_3|counterN:u1
+ 14. Parameter Settings for User Entity Instance: selector:sel|stopwatch:watch|counterN:u5
+ 15. Parameter Settings for User Entity Instance: selector:sel|stopwatch:watch|counterN:u7
+ 16. Parameter Settings for User Entity Instance: selector:sel|stopwatch:watch|counterN:u6
+ 17. Parameter Settings for User Entity Instance: selector:sel|stopwatch:watch|counterN:u8
+ 18. Parameter Settings for User Entity Instance: selector:sel|stopwatch:watch|counterN:u9
+ 19. Parameter Settings for User Entity Instance: selector:sel|stopwatch:watch|counterN:u10
+ 20. Parameter Settings for User Entity Instance: selector:sel|clock:clock|clk1hz:comb_3|counterN:u1
+ 21. Parameter Settings for User Entity Instance: selector:sel|clock:clock|counterN:u5
+ 22. Parameter Settings for User Entity Instance: selector:sel|clock:clock|counterN:u7
+ 23. Parameter Settings for User Entity Instance: selector:sel|clock:clock|counterN:u6
+ 24. Parameter Settings for User Entity Instance: selector:sel|clock:clock|counterN:u8
+ 25. Parameter Settings for User Entity Instance: selector:sel|clock:clock|counterN:u9
+ 26. Parameter Settings for User Entity Instance: selector:sel|alarm:alr|counterN:u8
+ 27. Parameter Settings for User Entity Instance: selector:sel|alarm:alr|counterN:u9
+ 28. Parameter Settings for User Entity Instance: selector:sel|alarm:alr|clk1hz:clk1|counterN:u1
+ 29. Parameter Settings for Inferred Entity Instance: selector:sel|alarm:alr|lpm_divide:Mod0
+ 30. Parameter Settings for Inferred Entity Instance: selector:sel|alarm:alr|lpm_divide:Div0
+ 31. Parameter Settings for Inferred Entity Instance: selector:sel|alarm:alr|lpm_divide:Mod1
+ 32. Parameter Settings for Inferred Entity Instance: selector:sel|clock:clock|lpm_divide:Mod0
+ 33. Parameter Settings for Inferred Entity Instance: selector:sel|alarm:alr|lpm_divide:Div1
+ 34. Parameter Settings for Inferred Entity Instance: selector:sel|clock:clock|lpm_divide:Div0
+ 35. Port Connectivity Checks: "selector:sel|alarm:alr|led:u6"
+ 36. Port Connectivity Checks: "selector:sel|alarm:alr|led:u5"
+ 37. Port Connectivity Checks: "selector:sel|alarm:alr|led:u4"
+ 38. Port Connectivity Checks: "selector:sel|alarm:alr|led:u3"
+ 39. Port Connectivity Checks: "selector:sel|alarm:alr|counterN:u9"
+ 40. Port Connectivity Checks: "selector:sel|alarm:alr|counterN:u8"
+ 41. Port Connectivity Checks: "selector:sel|clock:clock|counterN:u9"
+ 42. Port Connectivity Checks: "selector:sel|clock:clock|counterN:u8"
+ 43. Port Connectivity Checks: "selector:sel|clock:clock|counterN:u6"
+ 44. Port Connectivity Checks: "selector:sel|clock:clock|counterN:u7"
+ 45. Port Connectivity Checks: "selector:sel|clock:clock|counterN:u5"
+ 46. Port Connectivity Checks: "selector:sel|clock:clock|led:u10"
+ 47. Port Connectivity Checks: "selector:sel|clock:clock|led:u11"
+ 48. Port Connectivity Checks: "selector:sel|clock:clock|led:u4"
+ 49. Port Connectivity Checks: "selector:sel|clock:clock|led:u3"
+ 50. Port Connectivity Checks: "selector:sel|clock:clock|clk1hz:comb_3|counterN:u1"
+ 51. Port Connectivity Checks: "selector:sel|clock:clock"
+ 52. Port Connectivity Checks: "selector:sel|stopwatch:watch|counterN:u10"
+ 53. Port Connectivity Checks: "selector:sel|stopwatch:watch|counterN:u9"
+ 54. Port Connectivity Checks: "selector:sel|stopwatch:watch|counterN:u8"
+ 55. Port Connectivity Checks: "selector:sel|stopwatch:watch|counterN:u6"
+ 56. Port Connectivity Checks: "selector:sel|stopwatch:watch|counterN:u7"
+ 57. Port Connectivity Checks: "selector:sel|stopwatch:watch|led:k2"
+ 58. Port Connectivity Checks: "selector:sel|stopwatch:watch|led:k1"
+ 59. Port Connectivity Checks: "selector:sel|stopwatch:watch|led:u4"
+ 60. Port Connectivity Checks: "selector:sel|stopwatch:watch|led:u3"
+ 61. Port Connectivity Checks: "selector:sel|stopwatch:watch|led:u2"
+ 62. Port Connectivity Checks: "selector:sel|stopwatch:watch|led:u1"
+ 63. Port Connectivity Checks: "selector:sel|stopwatch:watch|clk001hz:comb_3|counterN:u1"
+ 64. Elapsed Time Per Partition
+ 65. Analysis & Synthesis Messages
+ 66. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Dec 20 06:28:46 2021           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; main                                            ;
+; Top-level Entity Name              ; main                                            ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 493                                             ;
+;     Total combinational functions  ; 488                                             ;
+;     Dedicated logic registers      ; 107                                             ;
+; Total registers                    ; 107                                             ;
+; Total pins                         ; 90                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C8      ;                    ;
+; Top-level entity name                                                      ; main               ; main               ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 24     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+; ../../main.v                     ; yes             ; User Verilog HDL File        ; D:/main.v                                                     ;         ;
+; output_files/clock.v             ; yes             ; User Verilog HDL File        ; D:/altera/Mainmodule/output_files/clock.v                     ;         ;
+; output_files/led.v               ; yes             ; User Verilog HDL File        ; D:/altera/Mainmodule/output_files/led.v                       ;         ;
+; output_files/stoopwatch.v        ; yes             ; User Verilog HDL File        ; D:/altera/Mainmodule/output_files/stoopwatch.v                ;         ;
+; output_files/mainclock.v         ; yes             ; User Verilog HDL File        ; D:/altera/Mainmodule/output_files/mainclock.v                 ;         ;
+; output_files/alarm.v             ; yes             ; User Verilog HDL File        ; D:/altera/Mainmodule/output_files/alarm.v                     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/altera/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/altera/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/altera/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; d:/altera/quartus/libraries/megafunctions/aglobal130.inc      ;         ;
+; db/lpm_divide_j9m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/altera/Mainmodule/db/lpm_divide_j9m.tdf                    ;         ;
+; db/sign_div_unsign_8kh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/altera/Mainmodule/db/sign_div_unsign_8kh.tdf               ;         ;
+; db/alt_u_div_44f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/altera/Mainmodule/db/alt_u_div_44f.tdf                     ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/altera/Mainmodule/db/add_sub_7pc.tdf                       ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/altera/Mainmodule/db/add_sub_8pc.tdf                       ;         ;
+; db/lpm_divide_ghm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/altera/Mainmodule/db/lpm_divide_ghm.tdf                    ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 493            ;
+;                                             ;                ;
+; Total combinational functions               ; 488            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 238            ;
+;     -- 3 input functions                    ; 76             ;
+;     -- <=2 input functions                  ; 174            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 402            ;
+;     -- arithmetic mode                      ; 86             ;
+;                                             ;                ;
+; Total registers                             ; 107            ;
+;     -- Dedicated logic registers            ; 107            ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 90             ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 50             ;
+; Total fan-out                               ; 1881           ;
+; Average fan-out                             ; 2.43           ;
++---------------------------------------------+----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                      ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                            ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |main                                        ; 488 (6)           ; 107 (0)      ; 0           ; 0            ; 0       ; 0         ; 90   ; 0            ; |main                                                                                                                          ; work         ;
+;    |selector:sel|                            ; 482 (109)         ; 107 (4)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel                                                                                                             ; work         ;
+;       |alarm:alr|                            ; 157 (34)          ; 36 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr                                                                                                   ; work         ;
+;          |clk1hz:clk1|                       ; 38 (1)            ; 26 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|clk1hz:clk1                                                                                       ; work         ;
+;             |counterN:u1|                    ; 37 (37)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|clk1hz:clk1|counterN:u1                                                                           ; work         ;
+;          |counterN:u8|                       ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|counterN:u8                                                                                       ; work         ;
+;          |counterN:u9|                       ; 8 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|counterN:u9                                                                                       ; work         ;
+;          |led:u3|                            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|led:u3                                                                                            ; work         ;
+;          |led:u4|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|led:u4                                                                                            ; work         ;
+;          |led:u5|                            ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|led:u5                                                                                            ; work         ;
+;          |led:u6|                            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|led:u6                                                                                            ; work         ;
+;          |lpm_divide:Div0|                   ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Div0                                                                                   ; work         ;
+;             |lpm_divide_ghm:auto_generated|  ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Div0|lpm_divide_ghm:auto_generated                                                     ; work         ;
+;                |sign_div_unsign_8kh:divider| ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Div0|lpm_divide_ghm:auto_generated|sign_div_unsign_8kh:divider                         ; work         ;
+;                   |alt_u_div_44f:divider|    ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Div0|lpm_divide_ghm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_44f:divider   ; work         ;
+;          |lpm_divide:Div1|                   ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Div1                                                                                   ; work         ;
+;             |lpm_divide_ghm:auto_generated|  ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Div1|lpm_divide_ghm:auto_generated                                                     ; work         ;
+;                |sign_div_unsign_8kh:divider| ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Div1|lpm_divide_ghm:auto_generated|sign_div_unsign_8kh:divider                         ; work         ;
+;                   |alt_u_div_44f:divider|    ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Div1|lpm_divide_ghm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_44f:divider   ; work         ;
+;          |lpm_divide:Mod0|                   ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Mod0                                                                                   ; work         ;
+;             |lpm_divide_j9m:auto_generated|  ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Mod0|lpm_divide_j9m:auto_generated                                                     ; work         ;
+;                |sign_div_unsign_8kh:divider| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Mod0|lpm_divide_j9m:auto_generated|sign_div_unsign_8kh:divider                         ; work         ;
+;                   |alt_u_div_44f:divider|    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Mod0|lpm_divide_j9m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_44f:divider   ; work         ;
+;          |lpm_divide:Mod1|                   ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Mod1                                                                                   ; work         ;
+;             |lpm_divide_j9m:auto_generated|  ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Mod1|lpm_divide_j9m:auto_generated                                                     ; work         ;
+;                |sign_div_unsign_8kh:divider| ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Mod1|lpm_divide_j9m:auto_generated|sign_div_unsign_8kh:divider                         ; work         ;
+;                   |alt_u_div_44f:divider|    ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|alarm:alr|lpm_divide:Mod1|lpm_divide_j9m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_44f:divider   ; work         ;
+;       |button:button1|                       ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|button:button1                                                                                              ; work         ;
+;       |button:button2|                       ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|button:button2                                                                                              ; work         ;
+;       |clock:clock|                          ; 122 (8)           ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock                                                                                                 ; work         ;
+;          |button:button1|                    ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|button:button1                                                                                  ; work         ;
+;          |clk1hz:comb_3|                     ; 9 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|clk1hz:comb_3                                                                                   ; work         ;
+;             |counterN:u1|                    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|clk1hz:comb_3|counterN:u1                                                                       ; work         ;
+;          |counterN:u5|                       ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|counterN:u5                                                                                     ; work         ;
+;          |counterN:u6|                       ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|counterN:u6                                                                                     ; work         ;
+;          |counterN:u7|                       ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|counterN:u7                                                                                     ; work         ;
+;          |counterN:u8|                       ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|counterN:u8                                                                                     ; work         ;
+;          |counterN:u9|                       ; 8 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|counterN:u9                                                                                     ; work         ;
+;          |led:u10|                           ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|led:u10                                                                                         ; work         ;
+;          |led:u11|                           ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|led:u11                                                                                         ; work         ;
+;          |led:u1|                            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|led:u1                                                                                          ; work         ;
+;          |led:u3|                            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|led:u3                                                                                          ; work         ;
+;          |led:u4|                            ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|led:u4                                                                                          ; work         ;
+;          |lpm_divide:Div0|                   ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|lpm_divide:Div0                                                                                 ; work         ;
+;             |lpm_divide_ghm:auto_generated|  ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|lpm_divide:Div0|lpm_divide_ghm:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_8kh:divider| ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|lpm_divide:Div0|lpm_divide_ghm:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
+;                   |alt_u_div_44f:divider|    ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|lpm_divide:Div0|lpm_divide_ghm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_44f:divider ; work         ;
+;          |lpm_divide:Mod0|                   ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|lpm_divide:Mod0                                                                                 ; work         ;
+;             |lpm_divide_j9m:auto_generated|  ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|lpm_divide:Mod0|lpm_divide_j9m:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_8kh:divider| ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|lpm_divide:Mod0|lpm_divide_j9m:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
+;                   |alt_u_div_44f:divider|    ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|clock:clock|lpm_divide:Mod0|lpm_divide_j9m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_44f:divider ; work         ;
+;       |stopwatch:watch|                      ; 92 (4)            ; 41 (2)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|stopwatch:watch                                                                                             ; work         ;
+;          |clk001hz:comb_3|                   ; 33 (1)            ; 17 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|stopwatch:watch|clk001hz:comb_3                                                                             ; work         ;
+;             |counterN:u1|                    ; 32 (32)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|stopwatch:watch|clk001hz:comb_3|counterN:u1                                                                 ; work         ;
+;          |counterN:u10|                      ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|stopwatch:watch|counterN:u10                                                                                ; work         ;
+;          |counterN:u5|                       ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|stopwatch:watch|counterN:u5                                                                                 ; work         ;
+;          |counterN:u6|                       ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|stopwatch:watch|counterN:u6                                                                                 ; work         ;
+;          |counterN:u7|                       ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|stopwatch:watch|counterN:u7                                                                                 ; work         ;
+;          |counterN:u8|                       ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|stopwatch:watch|counterN:u8                                                                                 ; work         ;
+;          |counterN:u9|                       ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|stopwatch:watch|counterN:u9                                                                                 ; work         ;
+;          |led:k1|                            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|stopwatch:watch|led:k1                                                                                      ; work         ;
+;          |led:u1|                            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|stopwatch:watch|led:u1                                                                                      ; work         ;
+;          |led:u2|                            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|stopwatch:watch|led:u2                                                                                      ; work         ;
+;          |led:u3|                            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|selector:sel|stopwatch:watch|led:u3                                                                                      ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                            ;
++----------------------------------------------------+----------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal              ; Free of Timing Hazards ;
++----------------------------------------------------+----------------------------------+------------------------+
+; selector:sel|clock:clock|mode                      ; selector:sel|clock:clock|always1 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                                  ;                        ;
++----------------------------------------------------+----------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                     ;
++------------------------------------------------------------------+---------------------------------------------------------------------+
+; Register name                                                    ; Reason for Removal                                                  ;
++------------------------------------------------------------------+---------------------------------------------------------------------+
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[0]       ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[0]  ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[24]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[24] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[23]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[23] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[22]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[22] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[21]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[21] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[20]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[20] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[19]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[19] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[18]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[18] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[17]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[17] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[16]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[16] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[15]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[15] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[14]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[14] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[13]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[13] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[12]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[12] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[11]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[11] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[10]      ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[10] ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[9]       ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[9]  ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[8]       ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[8]  ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[7]       ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[7]  ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[6]       ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[6]  ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[5]       ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[5]  ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[4]       ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[4]  ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[3]       ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[3]  ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[2]       ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[2]  ;
+; selector:sel|clock:clock|clk1hz:comb_3|counterN:u1|qout[1]       ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[1]  ;
+; selector:sel|stopwatch:watch|clk001hz:comb_3|counterN:u1|qout[0] ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[0]  ;
+; selector:sel|stopwatch:watch|clk001hz:comb_3|counterN:u1|qout[1] ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[1]  ;
+; selector:sel|stopwatch:watch|clk001hz:comb_3|counterN:u1|qout[2] ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[2]  ;
+; selector:sel|stopwatch:watch|clk001hz:comb_3|counterN:u1|qout[3] ; Merged with selector:sel|alarm:alr|clk1hz:clk1|counterN:u1|qout[3]  ;
+; Total Number of Removed Registers = 29                           ;                                                                     ;
++------------------------------------------------------------------+---------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 107   ;
+; Number of registers using Synchronous Clear  ; 1     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 31    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; selector:sel|stopwatch:watch|mode[1]   ; 5       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |main|selector:sel|out0[0] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |main|selector:sel|out2[5] ;
+; 10:1               ; 6 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |main|selector:sel|out1[5] ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |main|selector:sel|out3[1] ;
+; 10:1               ; 6 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |main|selector:sel|out5[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|stopwatch:watch|clk001hz:comb_3|counterN:u1 ;
++----------------+--------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                        ;
++----------------+--------+-----------------------------------------------------------------------------+
+; N              ; 250000 ; Signed Integer                                                              ;
+; M              ; 20     ; Signed Integer                                                              ;
++----------------+--------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|stopwatch:watch|counterN:u5 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; N              ; 10    ; Signed Integer                                               ;
+; M              ; 4     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|stopwatch:watch|counterN:u7 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; N              ; 10    ; Signed Integer                                               ;
+; M              ; 4     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|stopwatch:watch|counterN:u6 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; N              ; 10    ; Signed Integer                                               ;
+; M              ; 4     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|stopwatch:watch|counterN:u8 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; N              ; 6     ; Signed Integer                                               ;
+; M              ; 3     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|stopwatch:watch|counterN:u9 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; N              ; 10    ; Signed Integer                                               ;
+; M              ; 4     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|stopwatch:watch|counterN:u10 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; N              ; 6     ; Signed Integer                                                ;
+; M              ; 3     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|clock:clock|clk1hz:comb_3|counterN:u1 ;
++----------------+----------+---------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                ;
++----------------+----------+---------------------------------------------------------------------+
+; N              ; 25000000 ; Signed Integer                                                      ;
+; M              ; 25       ; Signed Integer                                                      ;
++----------------+----------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|clock:clock|counterN:u5 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 10    ; Signed Integer                                           ;
+; M              ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|clock:clock|counterN:u7 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 6     ; Signed Integer                                           ;
+; M              ; 3     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|clock:clock|counterN:u6 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 10    ; Signed Integer                                           ;
+; M              ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|clock:clock|counterN:u8 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 6     ; Signed Integer                                           ;
+; M              ; 3     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|clock:clock|counterN:u9 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 24    ; Signed Integer                                           ;
+; M              ; 5     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|alarm:alr|counterN:u8 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 60    ; Signed Integer                                         ;
+; M              ; 4     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|alarm:alr|counterN:u9 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 24    ; Signed Integer                                         ;
+; M              ; 5     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:sel|alarm:alr|clk1hz:clk1|counterN:u1 ;
++----------------+----------+-----------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                            ;
++----------------+----------+-----------------------------------------------------------------+
+; N              ; 25000000 ; Signed Integer                                                  ;
+; M              ; 25       ; Signed Integer                                                  ;
++----------------+----------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: selector:sel|alarm:alr|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                       ;
+; LPM_WIDTHD             ; 4              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_j9m ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: selector:sel|alarm:alr|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                       ;
+; LPM_WIDTHD             ; 4              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_ghm ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: selector:sel|alarm:alr|lpm_divide:Mod1 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                       ;
+; LPM_WIDTHD             ; 4              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_j9m ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: selector:sel|clock:clock|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                         ;
+; LPM_WIDTHD             ; 4              ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_j9m ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: selector:sel|alarm:alr|lpm_divide:Div1 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                       ;
+; LPM_WIDTHD             ; 4              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_ghm ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: selector:sel|clock:clock|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                         ;
+; LPM_WIDTHD             ; 4              ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_ghm ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|alarm:alr|led:u6"                                                                                                                                                    ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (5 bits) it drives.  The 27 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|alarm:alr|led:u5"                                                                                                                                                    ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (5 bits) it drives.  The 27 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|alarm:alr|led:u4"                                                                                                                                                    ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (5 bits) it drives.  The 27 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|alarm:alr|led:u3"                                                                                                                                                    ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (5 bits) it drives.  The 27 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|alarm:alr|counterN:u9"                                                                                                                                                      ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset      ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; enable     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; tc         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|alarm:alr|counterN:u8"                                                                                                                                                      ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset      ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; enable     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; qout       ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (5 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND.              ;
+; tc         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|clock:clock|counterN:u9"                                                                                                                                                    ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset      ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; enable     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; tc         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|clock:clock|counterN:u8"                                                                                                                                                    ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset      ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; enable     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; qout       ; Output ; Warning  ; Output or bidir port (3 bits) is smaller than the port expression (5 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND.              ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|clock:clock|counterN:u6"                                                                                                                                                    ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset      ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; enable     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; qout       ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (5 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND.              ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|clock:clock|counterN:u7"                                                                                                                                                    ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; enable     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; qout       ; Output ; Warning  ; Output or bidir port (3 bits) is smaller than the port expression (5 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND.              ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|clock:clock|counterN:u5"                                                                                                                                                    ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; enable     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; qout       ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (5 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND.              ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|clock:clock|led:u10"                                                                                                                                                 ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (5 bits) it drives.  The 27 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|clock:clock|led:u11"                                                                                                                                                 ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (5 bits) it drives.  The 27 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|clock:clock|led:u4"                                                                                                                                                  ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (5 bits) it drives.  The 27 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|clock:clock|led:u3"                                                                                                                                                  ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (5 bits) it drives.  The 27 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|clock:clock|clk1hz:comb_3|counterN:u1"                                                                                                                                      ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset      ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; enable     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; qout       ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|clock:clock"                                                                                                                                                       ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; mod  ; Input ; Warning  ; Input port expression (2 bits) is wider than the input port (1 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|stopwatch:watch|counterN:u10"                                                                                                                                               ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; enable     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; tc         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|stopwatch:watch|counterN:u9"                                                                                                                                               ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; enable     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|stopwatch:watch|counterN:u8"                                                                                                                                               ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; enable     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|stopwatch:watch|counterN:u6"                                                                                                                                               ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; enable     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|stopwatch:watch|counterN:u7"                                                                                                                                               ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; enable     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|stopwatch:watch|led:k2"                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                     ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (3 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "bcd[4..3]" will be connected to GND. ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|stopwatch:watch|led:k1"                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                     ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "bcd[4..4]" will be connected to GND. ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|stopwatch:watch|led:u4"                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                     ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (3 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "bcd[4..3]" will be connected to GND. ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|stopwatch:watch|led:u3"                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                     ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "bcd[4..4]" will be connected to GND. ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|stopwatch:watch|led:u2"                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                     ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "bcd[4..4]" will be connected to GND. ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|stopwatch:watch|led:u1"                                                                                                       ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                     ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "bcd[4..4]" will be connected to GND. ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selector:sel|stopwatch:watch|clk001hz:comb_3|counterN:u1"                                                                                                                                ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset      ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; enable     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; qout       ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Dec 20 06:28:44 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 2 entities, in source file /main.v
+    Info (12023): Found entity 1: main
+    Info (12023): Found entity 2: selector
+Info (12021): Found 5 design units, including 5 entities, in source file output_files/clock.v
+    Info (12023): Found entity 1: clk1hz
+    Info (12023): Found entity 2: counterN
+    Info (12023): Found entity 3: counterM
+    Info (12023): Found entity 4: clk001hz
+    Info (12023): Found entity 5: button
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/led.v
+    Info (12023): Found entity 1: led
+Warning (10275): Verilog HDL Module Instantiation warning at stoopwatch.v(37): ignored dangling comma in List of Port Connections
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/stoopwatch.v
+    Info (12023): Found entity 1: stopwatch
+Warning (10275): Verilog HDL Module Instantiation warning at mainclock.v(49): ignored dangling comma in List of Port Connections
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/mainclock.v
+    Info (12023): Found entity 1: clock
+Warning (10275): Verilog HDL Module Instantiation warning at alarm.v(18): ignored dangling comma in List of Port Connections
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/alarm.v
+    Info (12023): Found entity 1: alarm
+Warning (10236): Verilog HDL Implicit Net warning at alarm.v(17): created implicit net for "tc"
+Critical Warning (10846): Verilog HDL Instantiation warning at stoopwatch.v(24): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at mainclock.v(36): instance has no name
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (10034): Output port "LEDR[14..1]" at main.v(12) has no driver
+Warning (10034): Output port "LEDG" at main.v(11) has no driver
+Info (12128): Elaborating entity "selector" for hierarchy "selector:sel"
+Warning (10230): Verilog HDL assignment warning at main.v(38): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at main.v(39): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at main.v(40): truncated value with size 32 to match size of target (1)
+Info (12128): Elaborating entity "button" for hierarchy "selector:sel|button:button1"
+Info (12128): Elaborating entity "stopwatch" for hierarchy "selector:sel|stopwatch:watch"
+Warning (10230): Verilog HDL assignment warning at stoopwatch.v(39): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at stoopwatch.v(45): truncated value with size 32 to match size of target (2)
+Info (12128): Elaborating entity "clk001hz" for hierarchy "selector:sel|stopwatch:watch|clk001hz:comb_3"
+Info (12128): Elaborating entity "counterN" for hierarchy "selector:sel|stopwatch:watch|clk001hz:comb_3|counterN:u1"
+Warning (10230): Verilog HDL assignment warning at clock.v(29): truncated value with size 32 to match size of target (20)
+Info (12128): Elaborating entity "led" for hierarchy "selector:sel|stopwatch:watch|led:u1"
+Info (12128): Elaborating entity "counterN" for hierarchy "selector:sel|stopwatch:watch|counterN:u5"
+Warning (10230): Verilog HDL assignment warning at clock.v(29): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "counterN" for hierarchy "selector:sel|stopwatch:watch|counterN:u8"
+Warning (10230): Verilog HDL assignment warning at clock.v(29): truncated value with size 32 to match size of target (3)
+Info (12128): Elaborating entity "clock" for hierarchy "selector:sel|clock:clock"
+Warning (10235): Verilog HDL Always Construct warning at mainclock.v(56): variable "mode" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at mainclock.v(55): inferring latch(es) for variable "mode", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "mode" at mainclock.v(56)
+Info (12128): Elaborating entity "clk1hz" for hierarchy "selector:sel|clock:clock|clk1hz:comb_3"
+Info (12128): Elaborating entity "counterN" for hierarchy "selector:sel|clock:clock|clk1hz:comb_3|counterN:u1"
+Warning (10230): Verilog HDL assignment warning at clock.v(29): truncated value with size 32 to match size of target (25)
+Info (12128): Elaborating entity "counterN" for hierarchy "selector:sel|clock:clock|counterN:u9"
+Warning (10230): Verilog HDL assignment warning at clock.v(29): truncated value with size 32 to match size of target (5)
+Info (12128): Elaborating entity "alarm" for hierarchy "selector:sel|alarm:alr"
+Info (12128): Elaborating entity "counterN" for hierarchy "selector:sel|alarm:alr|counterN:u8"
+Warning (10230): Verilog HDL assignment warning at clock.v(29): truncated value with size 32 to match size of target (4)
+Warning (12020): Port "ordered port 1" on the entity instantiation of "u1" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored.
+Warning (12020): Port "ordered port 2" on the entity instantiation of "u1" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored.
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "selector:sel|clock:clock|bcd[4]" is missing source, defaulting to GND
+    Warning (12110): Net "selector:sel|clock:clock|bcd10[4]" is missing source, defaulting to GND
+    Warning (12110): Net "selector:sel|clock:clock|bcd10[3]" is missing source, defaulting to GND
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer selector:sel|clock:clock|comb~synth
+    Warning (19017): Found clock multiplexer selector:sel|clock:clock|comb~synth
+Info (278001): Inferred 6 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "selector:sel|alarm:alr|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "selector:sel|alarm:alr|Div0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "selector:sel|alarm:alr|Mod1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "selector:sel|clock:clock|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "selector:sel|alarm:alr|Div1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "selector:sel|clock:clock|Div0"
+Info (12130): Elaborated megafunction instantiation "selector:sel|alarm:alr|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "selector:sel|alarm:alr|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_j9m.tdf
+    Info (12023): Found entity 1: lpm_divide_j9m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_8kh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_44f.tdf
+    Info (12023): Found entity 1: alt_u_div_44f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc
+Info (12130): Elaborated megafunction instantiation "selector:sel|alarm:alr|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "selector:sel|alarm:alr|lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ghm.tdf
+    Info (12023): Found entity 1: lpm_divide_ghm
+Info (12130): Elaborated megafunction instantiation "selector:sel|alarm:alr|lpm_divide:Mod1"
+Info (12133): Instantiated megafunction "selector:sel|alarm:alr|lpm_divide:Mod1" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12130): Elaborated megafunction instantiation "selector:sel|alarm:alr|lpm_divide:Div1"
+Info (12133): Instantiated megafunction "selector:sel|alarm:alr|lpm_divide:Div1" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Warning (12241): 29 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND
+    Warning (13410): Pin "LEDR[2]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
+    Warning (13410): Pin "LEDR[4]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[9]" is stuck at GND
+    Warning (13410): Pin "LEDR[10]" is stuck at GND
+    Warning (13410): Pin "LEDR[11]" is stuck at GND
+    Warning (13410): Pin "LEDR[12]" is stuck at GND
+    Warning (13410): Pin "LEDR[13]" is stuck at GND
+    Warning (13410): Pin "LEDR[14]" is stuck at GND
+    Warning (13410): Pin "LEDG[6]" is stuck at GND
+    Warning (13410): Pin "LEDG[5]" is stuck at GND
+    Warning (13410): Pin "LEDG[4]" is stuck at GND
+    Warning (13410): Pin "LEDG[3]" is stuck at GND
+    Warning (13410): Pin "LEDG[2]" is stuck at GND
+    Warning (13410): Pin "LEDG[1]" is stuck at GND
+    Warning (13410): Pin "LEDG[0]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file D:/altera/Mainmodule/output_files/main.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 20 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "SW[10]"
+    Warning (15610): No output dependent on input pin "SW[11]"
+    Warning (15610): No output dependent on input pin "SW[12]"
+    Warning (15610): No output dependent on input pin "SW[13]"
+    Warning (15610): No output dependent on input pin "SW[14]"
+    Warning (15610): No output dependent on input pin "SW[15]"
+    Warning (15610): No output dependent on input pin "SW[16]"
+    Warning (15610): No output dependent on input pin "SW[17]"
+    Warning (15610): No output dependent on input pin "KEY[0]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+Info (21057): Implemented 584 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
+    Info (21059): Implemented 67 output pins
+    Info (21061): Implemented 494 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 75 warnings
+    Info: Peak virtual memory: 4595 megabytes
+    Info: Processing ended: Mon Dec 20 06:28:46 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/altera/Mainmodule/output_files/main.map.smsg.
+
+

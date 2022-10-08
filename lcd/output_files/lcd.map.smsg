@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at lcd.v(45): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at lcd.v(76): object "SW" differs only in case from object "sw" in the same scope

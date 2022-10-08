@@ -1,0 +1,203 @@
+$comment
+	File created using the following command:
+		vcd file lcdcontrol.msim.vcd -direction
+$end
+$date
+	Wed Dec 01 05:16:06 2021
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module lcd_controller_vlg_vec_tst $end
+$var reg 1 ! RS $end
+$var reg 1 " clk $end
+$var reg 8 # data [7:0] $end
+$var reg 1 $ reset $end
+$var reg 1 % start $end
+$var wire 1 & LCD_E $end
+$var wire 1 ' LCD_RS $end
+$var wire 1 ( LCD_RW $end
+$var wire 1 ) LCD_data [7] $end
+$var wire 1 * LCD_data [6] $end
+$var wire 1 + LCD_data [5] $end
+$var wire 1 , LCD_data [4] $end
+$var wire 1 - LCD_data [3] $end
+$var wire 1 . LCD_data [2] $end
+$var wire 1 / LCD_data [1] $end
+$var wire 1 0 LCD_data [0] $end
+$var wire 1 1 done $end
+$var wire 1 2 sampler $end
+$scope module i1 $end
+$var wire 1 3 gnd $end
+$var wire 1 4 vcc $end
+$var wire 1 5 unknown $end
+$var tri1 1 6 devclrn $end
+$var tri1 1 7 devpor $end
+$var tri1 1 8 devoe $end
+$var wire 1 9 count[2]~1_combout $end
+$var wire 1 : count[2]~2_combout $end
+$var wire 1 ; count[2]~3_combout $end
+$var wire 1 < clk~combout $end
+$var wire 1 = clk~clkctrl_outclk $end
+$var wire 1 > Selector8~0_combout $end
+$var wire 1 ? reset~combout $end
+$var wire 1 @ start~combout $end
+$var wire 1 A Selector0~0_combout $end
+$var wire 1 B reset~clkctrl_outclk $end
+$var wire 1 C state.S0~regout $end
+$var wire 1 D Selector1~0_combout $end
+$var wire 1 E state.S1~regout $end
+$var wire 1 F state.S2~feeder_combout $end
+$var wire 1 G state.S2~regout $end
+$var wire 1 H count[0]~0_combout $end
+$var wire 1 I Selector7~0_combout $end
+$var wire 1 J Selector5~0_combout $end
+$var wire 1 K Selector5~1_combout $end
+$var wire 1 L Equal0~0_combout $end
+$var wire 1 M Selector4~0_combout $end
+$var wire 1 N state.S3~regout $end
+$var wire 1 O Selector3~0_combout $end
+$var wire 1 P state.S4~regout $end
+$var wire 1 Q RS~combout $end
+$var wire 1 R count [3] $end
+$var wire 1 S count [2] $end
+$var wire 1 T count [1] $end
+$var wire 1 U count [0] $end
+$var wire 1 V data~combout [7] $end
+$var wire 1 W data~combout [6] $end
+$var wire 1 X data~combout [5] $end
+$var wire 1 Y data~combout [4] $end
+$var wire 1 Z data~combout [3] $end
+$var wire 1 [ data~combout [2] $end
+$var wire 1 \ data~combout [1] $end
+$var wire 1 ] data~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+b0 #
+0$
+0%
+x&
+x'
+0(
+x0
+x/
+x.
+x-
+x,
+x+
+x*
+x)
+x1
+x2
+03
+14
+x5
+16
+17
+18
+x9
+x:
+x;
+0<
+x=
+x>
+0?
+0@
+xA
+xB
+xC
+xD
+xE
+xF
+xG
+xH
+xI
+xJ
+xK
+xL
+xM
+xN
+xO
+xP
+0Q
+0U
+0T
+0S
+0R
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+$end
+#132
+0B
+#135
+0=
+#267
+0C
+0E
+0G
+0N
+0P
+#678
+09
+#821
+1J
+#934
+0F
+#1148
+0H
+#1149
+0L
+#1352
+1>
+#1399
+0O
+#1400
+1K
+#1553
+1:
+#1562
+1I
+#1685
+0M
+#1732
+0;
+#4035
+01
+#4052
+0&
+#4731
+0'
+#4817
+00
+#5904
+0A
+0D
+#8207
+0,
+#8208
+0/
+#8238
+0+
+#8248
+0)
+#8290
+0.
+#9211
+0*
+#9495
+0-
+#1000000

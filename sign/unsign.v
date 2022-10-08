@@ -1,0 +1,62 @@
+module controller(clk,reset, start,m0,load,shift,add,ready);
+	input clk,reset, start, m0;
+	output load,shift, add, ready;
+	reg [3:0]state;
+	localparam s0=0,s1=8,s2=9,s3=10,s4=11,s5=12,s6=13,s7=14,s8=15;
+	always @(posedge clk or posedge reset)
+		if (reset) state<=s0;
+		else
+			case(state)
+				s0:if (start)begin state <= s1;end
+				s1:if(m0)state <= s2;else state<=s3;
+				s2:state <= s3;
+				s3:if(m0)state<=s4;else state<=s5;
+				s4:state<=s5;
+				s5:if(m0)state<=s6;else state<=s7;
+				s6:state <=s7;
+				s7:if(m0)state<=s8;else state<=s0;
+				s8:state <=s0;
+			endcase
+	assign load = (state == s0)&start;
+	assign shift=(state==s1||state==s3||state==s5||state==s7)&~m0|(state==s2||state==s4||state==s6||state==s8);
+	assign add= (state==s1||state==s3||state==s5||state==s7)&m0;
+	assign ready=(state==s0)&~reset;
+endmodule
+
+
+
+
+module datapath(clk,reset,load,shift,add,word1,word2,product,m0);
+	input clk,reset,load,shift,add;
+	input[3:0]word1,word2;
+	output [7:0]product;
+	output m0;
+	
+	reg[7:0]product;
+	reg carry;
+	reg[3:0]multiplicand;
+	wire[4:0]sum;
+	assign m0=product[0];
+	assign sum = product [7:4]+multiplicand;
+	always @(posedge clk or posedge reset)begin
+		if (reset)begin multiplicand <= 0; product <=0;end
+		else if (load)begin
+			multiplicand <= word1;
+			product<={4'b0,word2};
+		end
+		else if(shift)
+			begin product <= {carry, product[7:1]};carry <=0;end
+		else if(add)
+			{carry,product[7:4]}<=sum;
+	end
+endmodule
+
+module unsign(clk,reset,start,word1,word2,product,ready);
+	input clk,reset,start;
+	input[3:0]word1,word2;
+	output[7:0]product;
+	output ready;
+	wire m0,load,shift,add;
+	datapath u1(clk,reset,load,shift,add,word1,word2,product,m0);
+	controller u2(clk,reset,start,m0,load,shift,add,ready);
+endmodule

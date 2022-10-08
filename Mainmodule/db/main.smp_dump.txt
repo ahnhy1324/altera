@@ -1,0 +1,6 @@
+
+State Machine - |main|selector:sel|clockset
+Name clockset.00 clockset.10 clockset.01 
+clockset.00 0 0 0 
+clockset.01 1 0 1 
+clockset.10 1 1 0 

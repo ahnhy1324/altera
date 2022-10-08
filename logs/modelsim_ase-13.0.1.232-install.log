@@ -1,0 +1,50 @@
+Log started 10/28/2021 at 14:04:17
+Preferred installation mode : unattended
+Trying to init installer in mode unattended
+Mode unattended successfully initialized
+Preparing to Install
+Preparing to Install
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Installing ModelSim Altera Verilog model files...
+Executing D:\altera/modelsim_ase/unzip.exe -q -o "D:\altera/modelsim_ase/altera/modelsim_altera_verilog.zip"
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Unpacking files
+Installing ModelSim Altera VHDL model files...
+Executing D:\altera/modelsim_ase/unzip.exe -q -o "D:\altera/modelsim_ase/altera/modelsim_altera_vhdl.zip"
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Executing D:\altera/vcredist_x86.exe /q:a
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Adding D:\altera\modelsim_ase\win32aloem to System Path
+Broadcasting environment changes
+Creating Uninstaller
+Creating uninstaller 25%
+Creating uninstaller 50%
+Creating uninstaller 75%
+Creating uninstaller 100%
+Installation completed
+Log finished 10/28/2021 at 14:06:34

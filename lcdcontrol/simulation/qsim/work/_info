@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\altera\lcdcontrol\simulation\qsim
+vlcd_controller
+Z1 IJD[W92P`o_XUK_eBn15X[0
+Z2 VIeVPE^7oZi`kojjb?HOPg1
+Z3 dD:\altera\lcdcontrol\simulation\qsim
+Z4 w1638303365
+Z5 8lcdcontrol.vo
+Z6 Flcdcontrol.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 JlMIiG=J_KOifd>C4?2JS1
+!s85 0
+Z10 !s108 1638303366.061000
+Z11 !s107 lcdcontrol.vo|
+Z12 !s90 -work|work|lcdcontrol.vo|
+!s101 -O0
+vlcd_controller_vlg_check_tst
+!i10b 1
+!s100 U6AKndWlJE[Zha3M<ch9E1
+I[2X@MH7BaW?lT=UemfP8Y3
+V:?1kajc<KlEZ1KNNiU0;82
+R3
+Z13 w1638303364
+Z14 8lcdcontrol.vt
+Z15 Flcdcontrol.vt
+L0 65
+R7
+r1
+!s85 0
+31
+Z16 !s108 1638303366.132000
+Z17 !s107 lcdcontrol.vt|
+Z18 !s90 -work|work|lcdcontrol.vt|
+!s101 -O0
+R8
+vlcd_controller_vlg_sample_tst
+!i10b 1
+!s100 =EfQKJ2I00@Q>bQ_6fSch0
+IAHYgBTHO4zNLGjeQL4EjG0
+VjoG32C]iA=of>YmK4LgB93
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vlcd_controller_vlg_vec_tst
+!i10b 1
+!s100 LL[Yma^_2a?:mK=1GFHAJ1
+I0hJJ9UM5XYXdklmWae[5O3
+VnFQSKDzzaFM@fo2oL522f1
+R3
+R13
+R14
+R15
+L0 393
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
